@@ -6,25 +6,25 @@ void minus();
 
 
 int base = 5; //Base. So far was barely tested with the base of 10, 8, 5, and 2, but it worked.
-char number1[4] = { '15', '15', '1', '15'}; //first number
-char number2[4] = { '10','2','13','12' };  //second number
+char number1[4] = { '4', '3', '1', '2'}; //first number
+char number2[4] = { '0','3','4','3' };  //second number
 int pos = 0;
 
 int main()
 {
 	
-	for (int t = 0; t < 4; t++)
+	for (int t = 0; t < sizeof(number1)/sizeof(char); t++)
 	{
 		printf("%c", number1[t]);
 	}
 	printf("\n - \n");
 	minus();
-	for (int t = 0; t < 4; t++)
+	for (int t = 0; t < sizeof(number1) / sizeof(char); t++)
 	{
 		printf("%c", number2[t]);
 	}
 	printf("\nAnswer: ");
-	for (int t = 0; t < 4; t++)
+	for (int t = 0; t < sizeof(number1) / sizeof(char); t++)
 	{
 		printf("%d ", number1[t]);
 	}
